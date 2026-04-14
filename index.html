@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gal Becher | ניהול וביצוע פרויקטים</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Gal Becher" class="logo-img" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span class="logo-text" style="display:none;">galbecher<span style="color: #fbc707;">.</span></span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="#about">על החברה</a></li>
+                <li><a href="#vision">חזון</a></li>
+                <li><a href="#projects">פרויקטים</a></li>
+                <li><a href="#clients">חברות</a></li>
+                <li><a href="#testimonials">ממליצים</a></li>
+                <li><a href="#architects">אדריכלים</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:0500000000" class="phone-btn">
+                <span class="phone-icon">📞</span>
+                <span class="phone-text">התקשרו עכשיו</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>גל בכר</h1>
+                <p>ניהול וביצוע פרויקטים הנדסיים בסטנדרט הגבוה ביותר</p>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>על החברה</h2>
+            <div class="container-small">
+                <p>כאן יופיע המלל על החברה, הניסיון המקצועי והמומחיות בתחום הבנייה והגמר.</p>
+            </div>
+        </section>
+
+        <section id="vision" class="content-section grey-bg">
+            <h2>חזון</h2>
+            <div class="container-small">
+                <p>החזון שלנו מושתת על דיוק, שקיפות מלאה מול הלקוח ושאיפה למצוינות בכל פרט ופרט בפרויקט.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2>פרויקטים</h2>
+            <div class="filter-menu">
+                <button class="filter-btn active" data-filter="all">כל הפרויקטים</button>
+                <button class="filter-btn" data-filter="commercial">מסחרי</button>
+                <button class="filter-btn" data-filter="restaurant">מסעדות</button>
+                <button class="filter-btn" data-filter="logistics">מרלוגים</button>
+            </div>
+
+            <div class="gallery-grid" id="projects-grid">
+                <div class="gallery-item" data-category="commercial">
+                    <img src="https://via.placeholder.com/400x300?text=Commercial+Project" alt="פרויקט 1">
+                    <div class="item-overlay">
+                        <h3>פרויקט מסחרי</h3>
+                        <p>תיאור קצר וגלריה</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="restaurant">
+                    <img src="https://via.placeholder.com/400x300?text=Restaurant+Project" alt="פרויקט 2">
+                    <div class="item-overlay">
+                        <h3>מסעדה</h3>
+                        <p>תיאור קצר וגלריה</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="logistics">
+                    <img src="https://via.placeholder.com/400x300?text=Logistics+Project" alt="פרויקט 3">
+                    <div class="item-overlay">
+                        <h3>מרלוג</h3>
+                        <p>תיאור קצר וגלריה</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="content-section grey-bg">
+            <h2>חברות שעבדו איתנו</h2>
+            <div class="clients-grid">
+                <div class="client-card">לוגו 1</div>
+                <div class="client-card">לוגו 2</div>
+                <div class="client-card">לוגו 3</div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="content-section">
+            <h2>לקוחות ממליצים</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <video controls width="100%"><source src="#" type="video/mp4"></video>
+                </div>
+            </div>
+        </section>
+
+        <section id="architects" class="content-section grey-bg">
+            <h2>אדריכלים שעבדנו איתם</h2>
+            <div class="architects-grid">
+                <div class="architect-item">
+                    <div class="arch-logo">LOGO</div>
+                    <div class="arch-info"><h3>שם אדריכל</h3><p>מלל תיאור עבודה משותפת</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>צרו קשר</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="שם מלא" required>
+                <input type="email" placeholder="אימייל" required>
+                <textarea placeholder="איך נוכל לעזור?" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">שליחת הודעה</button>
+            </form>
+        </section>
+    </main>
+
+    <a href="https://wa.me/972500000000" class="whatsapp-btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
