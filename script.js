@@ -1,5 +1,5 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
-    // המבורגר
+    // המבורגר (אופציונלי אם תוסיפי בהמשך)
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
     if (hamburger) {
@@ -25,4 +25,29 @@
             });
         });
     });
+
+    // מודל פרויקטים
+    const modal = document.getElementById('project-modal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            document.getElementById('modal-title').innerText = item.getAttribute('data-title');
+            document.getElementById('modal-description').innerText = item.getAttribute('data-desc');
+            document.getElementById('modal-location').innerText = item.getAttribute('data-loc');
+            document.getElementById('modal-architect').innerText = item.getAttribute('data-arch');
+            document.getElementById('modal-date').innerText = item.getAttribute('data-date');
+            document.getElementById('modal-main-img').src = item.querySelector('img').src;
+
+            modal.style.display = 'block';
+        });
+    });
+
+    if (closeBtn) {
+        closeBtn.onclick = () => modal.style.display = 'none';
+    }
+    
+    window.onclick = (e) => {
+        if (e.target == modal) modal.style.display = 'none';
+    };
 });
