@@ -17,9 +17,7 @@
         </div>
 
         <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <span></span><span></span><span></span>
         </div>
 
         <nav class="nav-links" id="nav-links">
@@ -41,7 +39,7 @@
             </a>
         </div>
     </header>
-
+    
     <main>
         <section id="hero" class="hero-section">
             <div class="container">
@@ -51,161 +49,145 @@
         </section>
 
         <section id="about" class="content-section">
-            <h2>על החברה</h2>
-            <div class="container-small">
-                <p>כאן יופיע המלל על החברה, הניסיון המקצועי והמומחיות בתחום הבנייה והגמר.</p>
+            <div class="container">
+                <h2>על החברה</h2>
+                <div class="container-small">
+                    <p>גל בכר הוא קבלן בתחום עבודות הגמר. </p>
+                </div>
             </div>
         </section>
 
         <section id="vision" class="content-section grey-bg">
-            <h2>חזון</h2>
-            <div class="container-small">
-                <p>החזון שלנו מושתת על דיוק, שקיפות מלאה מול הלקוח ושאיפה למצוינות בכל פרט ופרט בפרויקט.</p>
+            <div class="container">
+                <h2>חזון</h2>
+                <div class="container-small">
+                    <p>החזון שלנו מושתת על דיוק, שקיפות מלאה מול הלקוח ושאיפה למצוינות בכל פרט ופרט בפרויקט.</p>
+                </div>
             </div>
         </section>
 
+
         <section id="projects" class="content-section">
-            <h2>פרויקטים</h2>
-            <div class="filter-menu">
-                <button class="filter-btn active" data-filter="all">כל הפרויקטים</button>
-                <button class="filter-btn" data-filter="commercial">מסחרי</button>
-                <button class="filter-btn" data-filter="restaurant">מסעדות</button>
-                <button class="filter-btn" data-filter="logistics">מרלוגים</button>
-            </div>
-
-            <div class="gallery-grid" id="projects-grid">
-                <div class="gallery-item" data-category="commercial" 
-                     data-title="פרויקט מסחרי - משרדי הייטק" 
-                     data-desc="ביצוע עבודות גמר וניהול פרויקט עבור משרדי הייטק יוקרתיים הכוללים מערכות מורכבות."
-                     data-loc="הרצליה פיתוח" data-arch="אדריכל כהן" data-date="2025">
-                    <img src="https://via.placeholder.com/400x300?text=Commercial+Project" alt="פרויקט 1">
-                    <div class="item-overlay">
-                        <h3>פרויקט מסחרי</h3>
-                        <p>לחץ לפרטים וגלריה</p>
-                    </div>
+            <div class="container">
+                <h2>פרויקטים</h2>
+                <div class="filter-menu">
+                    <button class="filter-btn active" data-filter="all">כל הפרויקטים</button>
+                    <button class="filter-btn" data-filter="offices">משרדים</button>
+                    <button class="filter-btn" data-filter="restaurant">מסעדות</button>
+                    <button class="filter-btn" data-filter="factories">מפעלים</button>
+                    <button class="filter-btn" data-filter="logistics">מרלוגים</button>
                 </div>
 
-                <div class="gallery-item" data-category="restaurant" 
-                     data-title="מסעדת שף - טעמים" 
-                     data-desc="שיפוץ והקמה של מסעדת שף מאפס, כולל מטבח תעשייתי ועיצוב חלל אירוח."
-                     data-loc="תל אביב" data-arch="סטודיו עיצובים" data-date="2024">
-                    <img src="https://via.placeholder.com/400x300?text=Restaurant+Project" alt="פרויקט 2">
-                    <div class="item-overlay">
-                        <h3>מסעדה</h3>
-                        <p>לחץ לפרטים וגלריה</p>
-                    </div>
-                </div>
+                <div class="gallery-grid" id="projects-grid">
+                    
+                    <a href="projects/golda.html" class="gallery-item" data-category="restaurant">
+                        <img src="assets/images/projects/golda/1.png" alt="גולדה קריית אתא">">
+                        <div class="item-overlay">
+                            <h3>גולדה קריית אתא</h3>
+                            <p>לצפייה בפרויקט</p>
+                        </div>
+                    </a>
 
-                <div class="gallery-item" data-category="logistics" 
-                     data-title="מרלוג לוגיסטיקה חכם" 
-                     data-desc="ניהול ביצוע של מרכז לוגיסטי מתקדם הכולל תשתיות תקשורת ומערכות אחסון אוטומטיות."
-                     data-loc="קיסריה" data-arch="ישראל ישראלי" data-date="2026">
-                    <img src="https://via.placeholder.com/400x300?text=Logistics+Project" alt="פרויקט 3">
-                    <div class="item-overlay">
-                        <h3>מרלוג</h3>
-                        <p>לחץ לפרטים וגלריה</p>
-                    </div>
+                    <a href="projects/offices-hertzelia.html" class="gallery-item" data-category="offices">
+                        <img src="https://via.placeholder.com/400x300?text=Commercial+Project" alt="פרויקט משרדים">
+                        <div class="item-overlay">
+                            <h3>פרויקט משרדים</h3>
+                            <p>לצפייה בפרויקט</p>
+                        </div>
+                    </a>
+
+                    <a href="projects/logistics-center.html" class="gallery-item" data-category="logistics">
+                        <img src="https://via.placeholder.com/400x300?text=Logistics+Project" alt="מרלוג">
+                        <div class="item-overlay">
+                            <h3>מרלוג לוגיסטיקה</h3>
+                            <p>לצפייה בפרויקט</p>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </section>
 
         <section id="clients" class="content-section grey-bg">
-            <h2>חברות שעבדו איתנו</h2>
-            <div class="clients-grid">
-              <div class="client-card"><img src="assets/images/logos/clients/c1.jpg" alt="Client 1"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c2.jpg" alt="Client 2"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c3.jpg" alt="Client 3"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c4.jpg" alt="Client 4"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c5.jpg" alt="Client 5"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c6.jpg" alt="Client 6"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c7.jpg" alt="Client 7"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c8.jpg" alt="Client 8"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c9.jpg" alt="Client 9"></div>
-              <div class="client-card"><img src="assets/images/logos/clients/c10.jpg" alt="Client 10"></div>
+            <div class="container">
+                <h2>חברות שעבדו איתנו</h2>
+                <div class="clients-grid">
+                    <div class="client-card"><img src="assets/images/logos/clients/c1.jpg" alt="Client 1"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c2.jpg" alt="Client 2"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c3.jpg" alt="Client 3"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c4.jpg" alt="Client 4"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c5.jpg" alt="Client 5"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c6.jpg" alt="Client 6"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c7.jpg" alt="Client 7"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c8.jpg" alt="Client 8"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c9.jpg" alt="Client 9"></div>
+                    <div class="client-card"><img src="assets/images/logos/clients/c10.jpg" alt="Client 10"></div>
+                </div>
             </div>
         </section>
 
         <section id="testimonials" class="content-section">
-            <h2>לקוחות ממליצים</h2>
-            <div class="video-gallery-grid">
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <video controls poster="assets/images/video-placeholder-1.jpg">
-                            <source src="assets/videos/testimonial1.mp4" type="video/mp4">
-                        </video>
+            <div class="container">
+                <h2>לקוחות ממליצים</h2>
+                <div class="video-gallery-grid">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="assets/images/video-placeholder-1.jpg">
+                                <source src="assets/videos/testimonial1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="video-caption">המלצת חברת "לוגיסטיקה בע"מ"</p>
                     </div>
-                    <p class="video-caption">המלצת חברת "לוגיסטיקה בע"מ"</p>
-                </div>
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <video controls poster="assets/images/video-placeholder-2.jpg">
-                            <source src="assets/videos/testimonial2.mp4" type="video/mp4">
-                        </video>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="assets/images/video-placeholder-2.jpg">
+                                <source src="assets/videos/testimonial2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="video-caption">פרויקט שיקום מסעדת "טעמים"</p>
                     </div>
-                    <p class="video-caption">פרויקט שיקום מסעדת "טעמים"</p>
                 </div>
             </div>
         </section>
 
         <section id="architects" class="content-section grey-bg">
-            <h2>אדריכלים שעבדנו איתם</h2>
-            <div class="architects-gallery-grid">
-                <div class="arch-card">
-                    <div class="arch-header">
-                        <div class="arch-logo-circle">LOGO</div>
-                        <h3>אדריכל ישראל ישראלי</h3>
+            <div class="container">
+                <h2>אדריכלים שעבדנו איתם</h2>
+                <div class="architects-gallery-grid">
+                    <div class="arch-card">
+                        <div class="arch-header">
+                            <div class="arch-logo-circle">LOGO</div>
+                            <h3>אדריכל ישראל ישראלי</h3>
+                        </div>
+                        <p class="arch-text">מומחה בתכנון מרלו"גים ומבני תעשייה.</p>
                     </div>
-                    <p class="arch-text">מומחה בתכנון מרלו"גים ומבני תעשייה.</p>
-                </div>
-                <div class="arch-card">
-                    <div class="arch-header">
-                        <div class="arch-logo-circle">LOGO</div>
-                        <h3>סטודיו "עיצובים"</h3>
+                    <div class="arch-card">
+                        <div class="arch-header">
+                            <div class="arch-logo-circle">LOGO</div>
+                            <h3>סטודיו "עיצובים"</h3>
+                        </div>
+                        <p class="arch-text">ליווי אדריכלי צמוד בפרויקטים למסעדות.</p>
                     </div>
-                    <p class="arch-text">ליווי אדריכלי צמוד בפרויקטים למסעדות.</p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="content-section">
-            <h2>צרו קשר</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="שם מלא" required>
-                <input type="email" placeholder="אימייל" required>
-                <textarea placeholder="איך נוכל לעזור?" rows="5" required></textarea>
-                <button type="submit" class="submit-btn">שליחת הודעה</button>
-            </form>
+            <div class="container">
+                <h2>צרו קשר</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="שם מלא" required>
+                    <input type="email" placeholder="אימייל" required>
+                    <textarea placeholder="איך נוכל לעזור?" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">שליחת הודעה</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <a href="https://wa.me/972500000000" class="whatsapp-btn" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
-
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="project-details-container">
-                <div class="project-gallery-side">
-                    <div class="main-project-img">
-                        <img id="modal-main-img" src="" alt="תמונה ראשית">
-                    </div>
-                    <div class="project-thumbnails" id="modal-thumbnails">
-                        </div>
-                </div>
-                
-                <div class="project-info-side">
-                    <h2 id="modal-title">שם הפרויקט</h2>
-                    <p id="modal-description">תיאור קצר של הפרויקט.</p>
-                    <div class="project-meta">
-                        <div class="meta-item"><strong>📍 מיקום:</strong> <span id="modal-location"></span></div>
-                        <div class="meta-item"><strong>📐 אדריכל:</strong> <span id="modal-architect"></span></div>
-                        <div class="meta-item"><strong>📅 תאריך:</strong> <span id="modal-date"></span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

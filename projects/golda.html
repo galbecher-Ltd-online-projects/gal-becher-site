@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גולדה קריית אתא | גל בכר</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* עיצוב ספציפי לדף פרויקט לשיפור הפרופורציות */
+        .project-page-header {
+            padding: 40px 0;
+            background: var(--light-grey);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+            .back-link:hover {
+                color: var(--primary-color);
+            }
+
+        .project-main-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: start;
+        }
+
+        /* תיקון פרופורציות הקרוסלה */
+        .carousel-container {
+            position: relative;
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            /* שומר על יחס תמונה יפה גם כשהיא ריקה */
+            aspect-ratio: 16 / 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-project-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .main-project-img img {
+                max-width: 100%;
+                max-height: 100%;
+                /* מבטיח שהתמונה לא תתעוות */
+                object-fit: contain;
+                display: block;
+            }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px 12px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+            transition: 0.3s;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .next-btn {
+            left: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .prev-btn {
+            right: 0;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .project-thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .thumb-img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        /* התאמה למובייל */
+        @media (max-width: 768px) {
+            .project-main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .project-page-header {
+                padding: 20px 0;
+            }
+
+            .carousel-container {
+                aspect-ratio: 4 / 3;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Gal Becher" class="logo-img">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="../index.html">חזרה לדף הבית</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="project-page-header">
+            <a href="../index.html#projects" class="back-link">→ חזרה לכל הפרויקטים</a>
+            <h1>הקמת סניף - גולדה קריית אתא</h1>
+        </div>
+
+        <div class="project-main-content">
+            <div class="project-gallery-side">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                    <div class="main-project-img">
+                        <img id="main-img" src="../assets/images/projects/golda/1.png" alt="גולדה קריית אתא">
+                    </div>
+                    <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                <div class="project-thumbnails" id="thumbnails-container"></div>
+            </div>
+
+            <div class="project-info-side">
+                <h2>על הפרויקט</h2>
+                <p>ביצוע פרויקט הקמה מזורז בלוח זמנים צפוף של 27 ימי עבודה בלבד. הפרויקט כלל ביצוע גמר מלא, תשתיות אינסטלציה וחשמל, מערכות כיבוי אש וספרינקלרים, איטום, ריצוף וחיפויים, לצד עבודות תאורה ואלמנטים דקורטיביים ייחודיים.</p>
+
+                <div class="project-meta">
+                    <div class="meta-item"><strong>📍 מיקום:</strong> גבעת אלונים, קריית אתא</div>
+                    <div class="meta-item"><strong>📐 אדריכל:</strong> תכנון רשת גולדה</div>
+                    <div class="meta-item"><strong>📅 שנת ביצוע:</strong> 2024</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const images = [
+            '../assets/images/projects/golda/1.png'
+        ];
+
+        let currentIndex = 0;
+
+        function updateImage(index) {
+            if (index < 0) index = images.length - 1;
+            if (index >= images.length) index = 0;
+            currentIndex = index;
+
+            const mainImg = document.getElementById('main-img');
+            mainImg.src = images[currentIndex];
+
+            document.querySelectorAll('.thumb-img').forEach((t, i) => {
+                t.style.opacity = i === currentIndex ? '1' : '0.5';
+                t.style.border = i === currentIndex ? '2px solid #fbc707' : '2px solid transparent';
+            });
+        }
+
+        function changeSlide(step) {
+            updateImage(currentIndex + step);
+        }
+
+        const container = document.getElementById('thumbnails-container');
+        images.forEach((src, i) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = 'thumb-img';
+            img.onclick = () => updateImage(i);
+            container.appendChild(img);
+        });
+
+        updateImage(0);
+    </script>
+</body>
+</html>
