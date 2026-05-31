@@ -21,7 +21,9 @@ body {
     line-height: 1.6;
     color: var(--secondary-color);
     background-color: var(--white);
+    transition: background-color 0.8s ease;
 }
+
 
 .container {
     max-width: 1200px;
@@ -33,19 +35,33 @@ body {
 .main-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    height: 80px;
-    background: var(--white);
-    position: sticky;
+    align-items: center; /* זה מה שממרכז את כולם באותו קו גובה */
+    padding: 15px 5%; /* רווח פנימי ששומר על אוויר */
+    height: 80px; /* גובה קבוע שנותן מקום ללוגו לגדול */
+    background-color: var(--white);
+    position: fixed;
     top: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    /* height: 100%; - אפשר לוותר אם ה-Header כבר משתמש ב-align-items: center */
 }
 
 .logo-img {
-    height: 45px;
+    height: 70px; /* גובה מאוזן שנותן נוכחות בלי לחרוג */
     width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    /* הוספת padding קטן כדי שהלוגו לא יידבק לקצה הימני של המסך */
+    padding-left: 10px; 
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .nav-links ul {
@@ -54,16 +70,39 @@ body {
     gap: 25px;
 }
 
+/* עיצוב קישורי התפריט */
 .nav-links a {
-    text-decoration: none;
-    color: var(--secondary-color);
+    text-decoration: none !important;
+    color: var(--secondary-color) !important;
     font-weight: 600;
-    transition: 0.3s;
+    font-family: 'Assistant', sans-serif;
+    position: relative; /* חובה עבור הקו התחתון */
+    padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
-    .nav-links a:hover {
-        color: var(--primary-color);
-    }
+/* אפקט Hover - שינוי צבע לצהוב */
+.nav-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* הוספת הקו התחתון שמופיע ב-Hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* כשהעכבר מעל הקישור - הקו גדל ל-100% */
+.nav-links a:hover::after {
+    width: 100%;
+}
 
 .phone-btn {
     background: var(--secondary-color);
@@ -80,9 +119,10 @@ body {
         background: var(--primary-color);
         color: var(--secondary-color);
     }
+
 /* --- עיצוב המבורגר --- */
 .hamburger {
-    display: none; /* נסתר במחשב */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -96,15 +136,13 @@ body {
         transition: 0.3s;
     }
 
-/* התאמה למובייל */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
-    /* מופיע במובייל */
 
     .nav-links {
-        display: none; /* ברירת מחדל: תפריט סגור */
+        display: none;
         position: absolute;
         top: 80px;
         left: 0;
@@ -117,7 +155,7 @@ body {
     }
 
         .nav-links.active {
-            display: flex; /* נפתח כשלוחצים */
+            display: flex;
         }
 
         .nav-links ul {
@@ -125,37 +163,126 @@ body {
             gap: 15px;
         }
 }
+
 /* --- 4. Sections --- */
-.hero-section {
-    background: var(--secondary-color);
-    color: var(--white);
-    padding: 120px 20px;
-    text-align: center;
-    border-bottom: 5px solid var(--primary-color);
+body {
+    font-family: 'Assistant', sans-serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--white);
+    /* מעבר חלק עבור ה-body כולו */
+    transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
 }
 
-    .hero-section h1 {
-        color: var(--primary-color);
-        font-size: 3.5rem;
-        margin-bottom: 15px;
+    /* המחלקה שתופעל על ידי הסקריפט */
+    body.is-grey {
+        background-color: #f4f4f4 !important; /* הצבע האפור שלך */
     }
 
+    /* ביטול הצבע הקבוע של ה-grey-bg כדי שה-body ישלוט בו */
+.grey-bg {
+    background-color: transparent !important;
+}
+
+/* חשוב: הסרת ה-background-color מהסקשנים כדי שהם יהיו שקופים ויראו את ה-body */
 .content-section {
     padding: 80px 0;
     text-align: center;
+    background-color: transparent !important;
+}
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+    transition: background-color 0.8s ease; /* מעבר חלק בין צבעי רקע */
 }
 
-.grey-bg {
-    background: var(--light-grey);
+
+
+/* ה-Hero המעודכן - שומר על המבנה המקורי כדי לא לשבור את האתר */
+.hero-section {
+    position: relative;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 120px 20px; /* החזרתי את ה-padding המקורי שלך */
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+    overflow: hidden; /* שומר שהתמונות לא יברחו הצידה */
+    min-height: 80vh; /* גובה מינימלי נוח */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* הלוגו בתוך ה-Hero */
+.hero-logo {
+    max-width: 500px; /* הגבלה שתמנע ממנו להשתלט על המסך */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10; /* מעל התמונות */
+}
+
+.hero-section h1 {
+    position: relative;
+    z-index: 10;
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+/* הגדרות הסליידשואו מאחורה */
+.hero-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 0.5; /* שקיפות שתאפשר לראות את הלוגו והטקסט בקלות */
+}
+
+
+
+/* --- עיצוב כותרות H2 אחיד --- */
 h2 {
-    margin-bottom: 35px;
-    border-bottom: 4px solid var(--primary-color);
+    position: relative;
     display: inline-block;
-    padding-bottom: 8px;
+    margin-bottom: 45px;
     font-size: 2rem;
+    padding-bottom: 5px;
+    text-align: center;
 }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background-color: var(--primary-color);
+        border-radius: 2px;
+    }
 
 /* --- 5. Project Gallery --- */
 .filter-menu {
@@ -183,27 +310,72 @@ h2 {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
 }
 
-/* עיצוב משופר לכרטיסיית פרויקט כקישור */
 .gallery-item {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 16/9;
     cursor: pointer;
-    display: block; /* מבטיח שהקישור יתנהג כבלוק */
-    text-decoration: none; /* מסיר קו תחתון של קישור */
+    display: block;
+    text-decoration: none;
     color: inherit;
 }
 
+/* תפריט הסינון - עיצוב הכפתורים */
+.filter-btn {
+    background: none !important;
+    border: none !important;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+/* אפקט Hover - צבע משתנה וקו שצומח */
+.filter-btn:hover {
+    color: var(--primary-color);
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* עובי הקו הצהוב */
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.filter-btn:hover::after {
+    width: 60%; /* הקו לא חייב להיות מתחת לכל המילה, 60% נראה מאוד אלגנטי */
+}
+
+/* מצב "פעיל" - הכפתור שנבחר נשאר עם קו צהוב קבוע */
+.filter-btn.active {
+    color: var(--primary-color);
+}
+
+.filter-btn.active::after {
+    width: 60%;
+}
+
+    /* הגדרת תמונה אחת מאוחדת לשיפור החדות והאיכות */
     .gallery-item img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: 0.6s ease;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: auto; /* שיניתי ל-auto כדי למנוע "פיקסול יתר" */
     }
 
     .gallery-item:hover img {
@@ -230,17 +402,71 @@ h2 {
     opacity: 1;
 }
 
-.item-overlay h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+/* אודות
+/* סידור הסקשן החדש */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: right; /* יישור טקסט לימין */
+}
+
+.about-image {
+    flex: 0 0 350px; /* רוחב קבוע לתמונה */
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px; /* פינות מעוגלות למראה מודרני */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* פס עיצובי מתחת לכותרת */
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column; /* תמונה מעל הטקסט במובייל */
+        text-align: center;
+    }
+    
+    .about-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .about-content h2::after {
+        right: 50%;
+        transform: translateX(50%); /* מירכוז הפס במובייל */
+    }
 }
 
 /* --- 6. Clients Grid --- */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(5, 150px);
+    grid-template-columns: repeat(auto-fit, 150px);
     justify-content: center;
-    gap: 4px;
+    gap: 15px;
     margin-top: 30px;
 }
 
@@ -249,8 +475,6 @@ h2 {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1;
-    background: transparent;
-    border: none;
     padding: 10px;
 }
 
@@ -258,39 +482,147 @@ h2 {
         width: 100%;
         height: 100%;
         object-fit: contain;
-        opacity: 0.65;
+    transform: scale(1); /* נקודת מוצא להגדלה */
+    transition: transform 0.2s ease-in-out; /* זמן ארוך יותר ומעבר מסוג ease-in-out */
+        
     }
 
-/* --- 7. Media Queries --- */
+    .client-card img:hover {
+        transform: scale(1.1); /* הגדלה של הלוגו ב-10% */
+ }
+/* --- 7. צור קשר --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 40px auto;
+    gap: 15px;
+    padding: 40px;
+    background: var(--light-grey);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 1rem;
+        width: 100%;
+        outline: none;
+    }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary-color);
+        }
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .submit-btn:hover {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+
+/* --- 8. הגדרות ספציפיות לסקשנים (מעברי צבע) --- */
+#projects {
+    background-color: var(--white);
+}
+
+#contact {
+    background-color: var(--white);
+}
+
+/* --- 9. כפתור וואטסאפ מעודכן, קטן ב-35% וקבוע בשמאל --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* מוצמד לשמאל קבוע */
+    width: 70px;  /* מוקטן ב-35% - גודל מעולה ועדין */
+    height: 70px;
+    z-index: 9999; /* תמיד צף מעל הכל */
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* התיקון שהיה חסר: ריסון התמונה בתוך הכפתור */
+.whatsapp-btn img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* --- 10. בלוק התאמה למובייל מאוחד (פעם אחת בלבד!) --- */
 @media (max-width: 768px) {
-    .main-header {
-        padding: 0 15px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-    /* תפריט המבורגר יופעל ב-JS */
-
+    
+    /* גיבור (Hero) */
     .hero-section h1 {
         font-size: 2.5rem;
     }
 
+    /* גריד פרויקטים */
     .gallery-grid {
-        grid-template-columns: 1fr; /* פרויקט אחד בשורה במובייל */
+        grid-template-columns: 1fr;
         padding: 0 10px;
     }
 
+    /* גריד לקוחות */
     .clients-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
     }
-}
 
-.whatsapp-btn {
-    position: fixed;
-    bottom: 25px;
-    left: 25px;
-    width: 55px;
-    z-index: 1000;
-}
+    /* תפריט סינון פרויקטים בגלילה אופקית */
+    .filter-menu {
+        display: flex !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        gap: 15px;
+        padding: 15px 10px;
+        justify-content: flex-start !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-menu::-webkit-scrollbar {
+        display: none; /* הסתרת סרגל גלילה */
+    }
+
+    .filter-btn {
+        flex: 0 0 auto;
+    }
+
+    /* תפריט ניווט עליון במובייל (נפתח מההמבורגר) */
+    .nav-links {
+        display: none; /* מוסתר כברירת מחדל */
+        position: fixed; /* שינוי ל-fixed כדי שיכסה את המסך נכון */
+        top: 80px;
+        right: 0; /* נפתח מימין לשמאל בצורה נקייה */
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        z-index: 999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex !important; /* מוצג בלחיצה */
+    }
+ }
