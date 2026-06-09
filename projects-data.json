@@ -214,7 +214,20 @@
     "images": [
         "../assets/images/projects/mandarin/1.jpg"
     ]
+  },
+  "metomotion": {
+    "title": "הדף בבנייה",
+    "description": "",
+    "location": "חיפה",
+    "architect": "",
+    "year": "",
+    "images": [
+        "../assets/images/projects/metomotion/1.jpg",
+        "../assets/images/projects/metomotion/2.png"
+        
+    ]
   }
+
 
   
 }
