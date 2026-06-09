@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">פרויקט | גל בכר</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* כאן נשאר כל ה-CSS המצוין שכתבת לקרוסלה ולדף הפרויקט... */
+        .project-page-header { padding: 40px 0; background: var(--light-grey); margin-bottom: 40px; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--secondary-color); font-weight: 700; }
+        .back-link:hover { color: var(--primary-color); }
+        .project-main-content { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; margin-bottom: 60px; align-items: start; }
+        .carousel-container { position: relative; background: #f9f9f9; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; }
+        .main-project-img { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+        .main-project-img img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 15px 12px; cursor: pointer; font-size: 20px; z-index: 10; transition: 0.3s; border-radius: 0 5px 5px 0; }
+        .next-btn { left: 0; border-radius: 5px 0 0 5px; }
+        .prev-btn { right: 0; }
+        .carousel-btn:hover { background: var(--primary-color); color: var(--secondary-color); }
+        .project-thumbnails { display: flex; gap: 10px; margin-top: 15px; justify-content: center; flex-wrap: wrap; }
+        .thumb-img { width: 80px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: 0.3s; border: 2px solid transparent; }
+        @media (max-width: 768px) { .project-main-content { grid-template-columns: 1fr; gap: 20px; } .project-page-header { padding: 20px 0; } .carousel-container { aspect-ratio: 4 / 3; } }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo"><img src="../assets/images/logos/main_logo_black.svg" alt="Gal Becher" class="logo-img"></div>
+        <nav class="nav-links"><ul><li><a href="../index.html#projects"> חזרה לפרוייקטים נבחרים</a></li></ul></nav>
+    </header>
+
+    <main class="container">
+        <div class="project-page-header">
+            <a href="../index.html#projects" class="back-link">→ חזרה לכל הפרויקטים</a>
+            <h1 id="project-title">טוען פרויקט...</h1>
+        </div>
+
+        <div class="project-main-content">
+            <div class="project-gallery-side">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                    <div class="main-project-img">
+                        <img id="main-img" src="" alt="">
+                    </div>
+                    <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                <div class="project-thumbnails" id="thumbnails-container"></div>
+            </div>
+
+            <div class="project-info-side">
+                <h2>על הפרויקט</h2>
+                <p id="project-desc"></p>
+
+                <div class="project-meta">
+                    <div class="meta-item" id="meta-location"><strong>📍 מיקום:</strong> <span id="project-location"></span></div>
+                    <div class="meta-item" id="meta-architect"><strong>📐 אדריכל:</strong> <span id="project-architect"></span></div>
+                    <div class="meta-item" id="meta-year"><strong>📅 שנת ביצוע:</strong> <span id="project-year"></span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let images = [];
+        let currentIndex = 0;
+
+        // 1. פונקציה שמגלה איזה פרויקט המשתמש ביקש מתוך הכתובת (URL)
+        function getProjectKey() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id'); // מחפש את מה שכתוב אחרי ?id=
+        }
+
+        // 2. שאיבת המידע מקובץ ה-JSON המרכזי
+        // שאיבת המידע מקובץ ה-JSON המרכזי והזרקתו לדף
+        async function loadProjectData() {
+            const projectKey = getProjectKey();
+            if (!projectKey) return;
+
+            try {
+                // משיכת קובץ ה-JSON המרכזי
+                const response = await fetch('../projects-data.json');
+                const allProjects = await response.json();
+                const project = allProjects[projectKey];
+
+                if (!project) {
+                    document.getElementById('project-title').innerText = "פרויקט לא נמצא";
+                    return;
+                }
+
+                // 1. הזרקת המידע הבסיסי (כותרת ותיאור)
+                document.getElementById('page-title').innerText = project.title + " | גל בכר";
+                document.getElementById('project-title').innerText = project.title;
+                document.getElementById('project-desc').innerText = project.description;
+
+                // 2. הזרקת מיקום - אם קיים מציג, אם ריק מעלים את כל השורה
+                if (project.location && project.location.trim() !== "") {
+                    document.getElementById('project-location').innerText = project.location;
+                    document.getElementById('meta-location').style.display = 'block';
+                } else {
+                    document.getElementById('meta-location').style.display = 'none';
+                }
+
+                // 3. הזרקת אדריכל - אם קיים מציג, אם ריק מעלים את כל השורה
+                if (project.architect && project.architect.trim() !== "") {
+                    document.getElementById('project-architect').innerText = project.architect;
+                    document.getElementById('meta-architect').style.display = 'block';
+                } else {
+                    document.getElementById('meta-architect').style.display = 'none';
+                }
+
+                // 4. הזרקת שנת ביצוע
+                if (project.year && project.year.trim() !== "") {
+                    document.getElementById('project-year').innerText = project.year;
+                    document.getElementById('meta-year').style.display = 'block';
+                } else {
+                    document.getElementById('meta-year').style.display = 'none';
+                }
+
+                // 5. עדכון מערך התמונות עבור הקרוסלה
+                images = project.images || [];
+                
+                const container = document.getElementById('thumbnails-container');
+                container.innerHTML = ''; // מנקה פלייסהולדרים ישנים אם נשארו ב-HTML
+
+                // אם יש תמונות, מייצרים את הטאמבניילס ומציגים את הראשונה
+                if (images.length > 0) {
+                    images.forEach((src, i) => {
+                        const img = document.createElement('img');
+                        img.src = src;
+                        img.className = 'thumb-img';
+                        img.onclick = () => updateImage(i);
+                        container.appendChild(img);
+                    });
+
+                    // הצגת התמונה הראשונה בקרוסלה
+                    updateImage(0);
+                } else {
+                    // למקרה שאין תמונות בכלל בפרויקט - מסתיר את אזור הגלריה או שם תמונת פלייסהולדר
+                    document.getElementById('main-img').src = '../assets/images/logo.png'; // או נתיב לתמונת בקרוב
+                    document.getElementById('main-img').style.objectFit = 'contain';
+                }
+
+            } catch (error) {
+                console.error("שגיאה בטעינת נתוני הפרויקט:", error);
+            }
+        }
+            
+        // --- פונקציות הקרוסלה המצוינות שלך (ללא שינוי) ---
+        function updateImage(index) {
+            if (images.length === 0) return;
+            if (index < 0) index = images.length - 1;
+            if (index >= images.length) index = 0;
+            currentIndex = index;
+
+            const mainImg = document.getElementById('main-img');
+            mainImg.src = images[currentIndex];
+
+            document.querySelectorAll('.thumb-img').forEach((t, i) => {
+                t.style.opacity = i === currentIndex ? '1' : '0.5';
+                t.style.border = i === currentIndex ? '2px solid var(--primary-color)' : '2px solid transparent';
+            });
+        }
+
+        function changeSlide(step) {
+            updateImage(currentIndex + step);
+        }
+
+        // הפעלה אוטומטית כשהדף עולה
+        document.addEventListener('DOMContentLoaded', loadProjectData);
+    </script>
+</body>
+</html>

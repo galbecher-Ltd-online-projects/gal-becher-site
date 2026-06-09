@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gal Becher | ניהול וביצוע פרויקטים</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS - אנימציות גלילה -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/images/logos/main_logo_black.svg" alt="Gal Becher" class="logo-img" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span class="logo-text" style="display:none;">galbecher<span style="color: #fbc707;">.</span></span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+        </div>
+<nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="#about">על החברה</a></li>
+                <li><a href="#projects">פרויקטים</a></li>
+                <li><a href="#clients">לקוחות</a></li>
+                <li><a href="#testimonials">ממליצים</a></li>
+                <li><a href="#architects">אדריכלים</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="tel:0522693649" class="phone-btn">
+                <span class="phone-icon"></span>
+                <span class="phone-text">התקשרו עכשיו</span>
+            </a>
+        </div>
+    </header>
+    
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-slideshow">
+                <div class="slide" style="background-image: url('assets/images/hero/1.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/images/hero/2.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/images/hero/3.jpg');"></div>
+            </div>
+            <div class="container hero-content">
+                <img src="assets/images/logos/main_logo_white.svg" alt="לוגו גל בכר" class="hero-logo" data-aos="zoom-in">
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container" style="max-width: 950px; margin: 0 auto;">
+                
+                <div class="about-block company-story-block" data-aos="fade-up">
+                    <h2 class="section-title">על החברה</h2>
+                    <div id="about-company-paragraphs" class="company-paragraphs-container">
+                        </div>
+                </div>
+
+                
+
+                <div class="about-block gal-profile-grid" data-aos="fade-up">
+                    
+                    <div class="gal-image-col">
+                        <img src="assets/images/gal-portrait.png" alt="גל בכר" class="gal-clean-img">
+                    </div>
+
+                    <div class="gal-text-col">
+                        <h3 id="about-gal-title" class="gal-profile-title"></h3>
+                        <p id="about-gal-text" class="gal-profile-text"></p>
+                    </div>
+
+                </div>
+
+                <div class="about-block vision-block" data-aos="fade-up">
+                    <h3 id="about-vision-title" class="about-sub-title-centered"></h3>
+                    <p id="about-vision-text" class="vision-quote-text"></p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+        <div class="container">
+        <h2 data-aos="fade-up">פרויקטים</h2>
+        
+            <div class="filter-menu" data-aos="zoom-in">
+                <button class="filter-btn active" data-filter="all">כל הפרויקטים</button>
+                <button class="filter-btn" data-filter="offices">משרדים</button>
+                <button class="filter-btn" data-filter="restaurant">מסעדות</button>
+                <button class="filter-btn" data-filter="factories">מפעלים</button>
+                <button class="filter-btn" data-filter="logistics">מרלוגים</button>
+                <button class="filter-btn" data-filter="privet">אחר</button>
+            </div>
+
+            <div class="gallery-grid" id="projects-grid">
+                
+                <a href="projects/project-template.html?id=golda-krityat-ata" class="gallery-item" data-aos="zoom-in" data-category="restaurant">
+                    <img src="assets/images/projects/golda/1.png" alt="גולדה קריית אתא">
+                    <div class="item-overlay">
+                        <h3>GOLDA</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=plasim" class="gallery-item" data-aos="zoom-in" data-category="offices">
+                    <img src="assets/images/projects/plassim/1.jpg" alt="פלסים">
+                    <div class="item-overlay">
+                        <h3>פלסים</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=stanley-cafeteria" class="gallery-item" data-aos="zoom-in" data-category="logistics">
+                    <img src="assets/images/projects/stanley/1.png" alt="STANLEY">
+                    <div class="item-overlay">
+                        <h3>STANLEY</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=yesh-po-pizza" class="gallery-item" data-aos="zoom-in" data-category="restaurant">
+                    <img src="assets/images/projects/pizza/1.jpg" alt="יש פה פיצה">
+                    <div class="item-overlay">
+                        <h3>יש פה פיצה</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=ikea-netanya" class="gallery-item" data-aos="zoom-in" data-category="restaurant">
+                    <img src="assets/images/projects/ikea/1.jpg" alt="IKEA">
+                    <div class="item-overlay">
+                        <h3>IKEA</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=mego-afek" class="gallery-item" data-aos="zoom-in" data-category="offices">
+                    <img src="assets/images/projects/mago_afek/1.jpg" alt="MEGO AFEK">
+                    <div class="item-overlay">
+                        <h3>MEGO AFEK</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=xact" class="gallery-item" data-aos="zoom-in" data-category="offices">
+                    <img src="assets/images/projects/xact/1.png" alt="XACT">
+                    <div class="item-overlay">
+                        <h3>XACT</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=tzfririm-1" class="gallery-item" data-aos="zoom-in" data-category="restaurant">
+                    <img src="assets/images/projects/tzafririm/1.jpg" alt="צפרירים 1">
+                    <div class="item-overlay">
+                        <h3>צפרירים 1</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=volta" class="gallery-item" data-aos="zoom-in" data-category="restaurant">
+                    <img src="assets/images/projects/volta/1.png" alt="VOLTA">
+                    <div class="item-overlay">
+                        <h3>VOLTA</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=metomotion" class="gallery-item" data-aos="zoom-in" data-category="offices">
+                    <img src="assets/images/projects/metomotion/1.jpg" alt="METOMOTION">
+                    <div class="item-overlay">
+                        <h3>METOMOTION</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=haifa-port-loft" class="gallery-item" data-aos="zoom-in" data-category="privet">
+                    <img src="assets/images/projects/haifa_port/1.JPG" alt="נמל חיפה">
+                    <div class="item-overlay">
+                        <h3>נמל חיפה</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=house-tivon" class="gallery-item" data-aos="zoom-in" data-category="privet">
+                    <img src="assets/images/projects/tivon_villa/1.png" alt="הבית בטבעון">
+                    <div class="item-overlay">
+                        <h3>הבית בטבעון</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=mandarin" class="gallery-item" data-aos="zoom-in" data-category="offices">
+                    <img src="assets/images/projects/mandarin/1.jpg" alt="מנדרין">
+                    <div class="item-overlay">
+                        <h3>מנדרין</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=isrotel-carmel-forest" class="gallery-item" data-aos="zoom-in" data-category="privet">
+                    <img src="assets/images/projects/isrotel/1.webp" alt="ישרוטל">
+                    <div class="item-overlay">
+                        <h3>ישרוטל</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=derech-hatzafon" class="gallery-item" data-aos="zoom-in" data-category="offices">
+                    <img src="assets/images/projects/coming-soon.jpg" alt="דרך הצפון">
+                    <div class="item-overlay">
+                        <h3>דרך הצפון</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+                <a href="projects/project-template.html?id=hamyasdim-16" class="gallery-item" data-aos="zoom-in" data-category="restaurant">
+                    <img src="assets/images/projects/coming-soon.jpg" alt="המייסדים 16">
+                    <div class="item-overlay">
+                        <h3>המייסדים 16</h3>
+                        <p>לצפייה בפרויקט</p>
+                    </div>
+                </a>
+
+            </div>
+            </div>
+        </section>
+
+        <section id="clients" class="content-section grey-bg">
+            <div class="container">
+                <h2 data-aos="fade-up">חברות שעבדו איתנו</h2>
+                <div class="clients-grid">
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c1.jpg" alt="Client 1"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c2.jpg" alt="Client 2"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c3.jpg" alt="Client 3"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c4.jpg" alt="Client 4"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c5.jpg" alt="Client 5"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c6.jpg" alt="Client 6"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c7.jpg" alt="Client 7"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c8.jpg" alt="Client 8"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets/images/logos/clients/c9.jpg" alt="Client 9"></div>
+                    
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\11.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\12.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\13.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\14.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\15.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\16.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\17.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\18.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\19.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\20.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\21.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\22.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\23.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\24.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\25.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\26.svg" alt="Client 10"></div>
+                    <div class="client-card" data-aos="zoom-in"><img src="assets\images\logos\clients\27.svg" alt="Client 10"></div>
+
+                </div>
+            </div>
+        </section>
+
+<section id="testimonials" class="content-section">
+        <div class="container">
+            <h2 data-aos="fade-up">לקוחות ממליצים</h2>
+            
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card video-testimonial" data-video-id="L7-4HhkKGGU" data-aos="fade-up">
+                    <div class="video-preview-wrapper">
+                        <img src="https://img.youtube.com/vi/L7-4HhkKGGU/hqdefault.jpg" alt="המלצה פרויקט גל בכר" class="video-thumb">
+                        <div class="play-btn-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>אפרת</h3>
+                        <p class="client-role"></p>
+                        <p class="testimonial-text">" איכות, מבחינת החומרים - ברמה הגבוהה ביותר, והשיפוץ עצמו מהיר!"</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card video-testimonial" data-video-id="o-K6OlBnQLY" data-aos="fade-up">
+                    <div class="video-preview-wrapper">
+                        <img src="https://img.youtube.com/vi/o-K6OlBnQLY/hqdefault.jpg" alt="המלצה פרויקט גל בכר" class="video-thumb">
+                        <div class="play-btn-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>שרון</h3>
+                        <p class="client-role"></p>
+                        <p class="testimonial-text">" איכות, מבחינת החומרים - ברמה הגבוהה ביותר, והשיפוץ עצמו מהיר!"</p>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </section>
+
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="modalIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+        <section id="architects" class="content-section grey-bg">
+            <div class="container">
+                <h2 data-aos="fade-up">אדריכלים שעבדנו איתם</h2>
+                
+                <div class="architects-tags-container" data-aos="fade-up">
+                    <span class="arch-tag">אביעד פייט</span>
+                    <span class="arch-tag">אורן בירן</span>
+                    <span class="arch-tag">אידה דהרי</span>
+                    <span class="arch-tag">אייל מלכה</span>
+                    <span class="arch-tag">אייל צייג</span>
+                    <span class="arch-tag">אלי חי</span>
+                    <span class="arch-tag">גילה מנחם</span>
+                    <span class="arch-tag">גרשון צור</span>
+                    <span class="arch-tag">דימה</span>
+                    <span class="arch-tag">חגית ברנשטיין</span>
+                    <span class="arch-tag">יורם שטרית</span>
+                    <span class="arch-tag">לי מילוא</span>
+                    <span class="arch-tag">מור חגי</span>
+                    <span class="arch-tag">נועם לוי</span>
+                    <span class="arch-tag">עופר רנד</span>
+                    <span class="arch-tag">רז בן אור</span>
+                    <span class="arch-tag">שחר קיקו</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="container" style="text-align: center;">
+                <h2 data-aos="fade-up">צור קשר</h2>
+                
+                <!-- הטופס המעודכן שמפנה ל-Web3Forms עם הקישור והמפתח שלך -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    
+                    <!-- מפתח הגישה שקיבלת מהמערכת -->
+                    <input type="hidden" name="access_key" value="95abff1d-bafc-4c32-8af6-84ba7b336470">
+                    
+                    <!-- שדות הקלט עם מאפיין name חובה עבור קליטת הנתונים -->
+                    <input type="text" id="formName" name="name" placeholder="שם מלא" required>
+                    <input type="email" id="formEmail" name="email" placeholder="אימייל" required>
+                    <textarea id="formMessage" name="message" placeholder="איך נוכל לעזור?" rows="5" required></textarea>
+                    
+                    <!-- שינוי כיתוב הכפתור כדי שיתאים לשליחת מייל -->
+                    <button type="submit" class="submit-btn">שלח</button>
+                </form>
+            </div>
+        </section>
+        <footer class="main-footer" style="background-color: #1e1e1e; color: #ffffff; padding: 30px 0; margin-top: 60px; font-family: 'Assistant', sans-serif; direction: rtl;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <p style="margin: 0; font-size: 0.95rem; color: #ccc;">© 2026 גל בכר - ניהול וביצוע פרויקטים. כל הזכויות שמורות.</p>
+            
+            <a href="#" style="color: #fbc707; text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s;" 
+               onmouseover="this.style.color='#ffffff';" 
+               onmouseout="this.style.color='#fbc707';"
+               onclick="document.getElementById('accessibilityModal').style.display='flex'; return false;">הצהרת נגישות</a>
+        </div>
+    </footer>
+
+    <div id="accessibilityModal" class="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center; padding: 20px;">
+        <div style="background: #ffffff; color: #1e1e1e; padding: 35px; border-radius: 8px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; position: relative; direction: rtl; text-align: right; box-shadow: 0 5px 25px rgba(0,0,0,0.2);">
+            
+            <span style="position: absolute; top: 15px; left: 20px; font-size: 30px; cursor: pointer; color: #1e1e1e; font-weight: bold; line-height: 1;" 
+                  onclick="document.getElementById('accessibilityModal').style.display='none';">&times;</span>
+            
+            <h3 style="margin-top: 0; margin-bottom: 20px; font-size: 1.6rem; font-weight: 700; border-bottom: 3px solid #fbc707; padding-bottom: 10px;">הצהרת נגישות - גל בכר</h3>
+            
+            <p style="margin-bottom: 15px; line-height: 1.7; font-size: 1rem; color: #333;">חברתנו רואה חשיבות עליונה בהנגשת אתר האינטרנט לאנשים עם מוגבלויות, מתוך תפיסת עולם לפיה לכל אדם מגיעה הזכות לחיות בשוויון, נוחות ועצמאות.</p>
+            
+            <h4 style="margin-top: 25px; margin-bottom: 12px; font-weight: 700; color: #1e1e1e; font-size: 1.15rem;">התאמות הנגישות שבוצעו באתר:</h4>
+            <ul style="margin-right: 20px; margin-bottom: 20px; line-height: 1.7; font-size: 1rem; color: #444;">
+                <li style="margin-bottom: 8px;">מבנה קוד סמנטי תקני המותאם לקוראי מסך עבור עיוורים וכבדי ראייה.</li>
+                <li style="margin-bottom: 8px;">תמיכה מלאה בניווט באמצעות מקלדת (מקש Tab).</li>
+                <li style="margin-bottom: 8px;">תגיות תיאור (Alt) לכל תמונות הלוגו והפרויקטים המוצגים באתר.</li>
+                <li style="margin-bottom: 8px;">הטמעת תוסף נגישות חיצוני המאפשר שינוי ניגודיות, הגדלת גופנים ועצירת אנימציות.</li>
+            </ul>
+
+            <h4 style="margin-top: 25px; margin-bottom: 10px; font-weight: 700; color: #1e1e1e; font-size: 1.15rem;">פרטי רכז נגישות ופניות:</h4>
+            <p style="line-height: 1.7; font-size: 1rem; color: #333; margin-bottom: 0;">
+                אם נתקלתם בקושי, ברכיב שאינו נגיש או שברצונכם להציע שיפור, ניתן לפנות ישירות לגל בכר בכתובת המייל: <strong style="direction: ltr; display: inline-block; color: #000;">galbecher@gmail.com</strong>.
+            </p>
+            
+            <p style="margin-top: 35px; font-size: 0.85rem; color: #777; text-align: center; margin-bottom: 0;">הצהרה זו עודכנה בחודש יוני 2026</p>
+        </div>
+    </div>
+
+        <a href="https://wa.me/972522693649?text=שלום,%20אשמח%20לקבל%20פרטים%20נוספים" class="whatsapp-btn" target="_blank">
+            <img src="assets\images\whatsapp-icon.svg.png" alt="WhatsApp">
+        </a>
+        
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- טעינת סקריפטים חיצוניים -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // 1. הפעלת AOS - האנימציה שחוזרת על עצמה
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true,
+            offset: 120 // גורם לאנימציה להתחיל קצת לפני שהאלמנט מגיע לקצה המסך
+        });
+
+        // פונקציה להפעלת הסליידשואו ב-Hero
+        function runSlideshow() {
+            const slides = document.querySelectorAll('.slide');
+            let index = 0;
+
+            if (slides.length === 0) return; // הגנה למקרה שאין תמונות
+
+            // מפעיל את התמונה הראשונה
+            slides[0].classList.add('active');
+
+            // לופ שרץ כל 5 שניות
+            setInterval(() => {
+                slides[index].classList.remove('active'); // מסיר מהנוכחית
+                index = (index + 1) % slides.length;     // עובר לבאה (וחוזר להתחלה)
+                slides[index].classList.add('active');    // מוסיף לבאה
+            }, 2500);
+        }
+
+        // הפעלה ברגע שהדף מוכן
+        document.addEventListener('DOMContentLoaded', runSlideshow);
+
+        // 2. סקריפט החלפת הרקע (הפעם הוא יעבוד כי הוא בסוף הדף)
+        const observerOptions = { threshold: 0.3 };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('grey-bg')) {
+                        document.body.classList.add('is-grey');
+                    } else {
+                        document.body.classList.remove('is-grey');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // מחברים את ה"צופה" לכל הסקשנים
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+    
+    <script style="display:none" class="document-script">
+        (function() {
+            var el = document.createElement('script');
+            el.src = 'https://cdn.enable.co.il/licenses/enable-v2.min.js';
+            el.type = 'text/javascript';
+            el.async = true;
+            window._enable_config = {
+                position: 'right', // מיקום הכפתור באתר: 'right' (ימין למטה) או 'left' (שמאל למטה)
+                type: 'accessibility',
+                utf8: true
+            };
+            document.getElementsByTagName('head')[0].appendChild(el);
+        })();
+    </script>
+
+
+    <div id="custom-accessibility-btn" 
+         role="button"
+         aria-label="פתח תפריט נגישות"
+         tabindex="0"
+         onclick="if(window.enable_accessibility_trigger){ window.enable_accessibility_trigger(); } else { alert('רכיב הנגישות בטעינה, אנא נסה שוב בעוד רגע...'); }"
+         onkeydown="if(event.key === 'Enter' || event.key === ' '){ if(window.enable_accessibility_trigger){ window.enable_accessibility_trigger(); } event.preventDefault(); }"
+         style="position: fixed; bottom: 25px; right: 25px; width: 56px; height: 56px; background-color: #1e1e1e; border: 2px solid #fbc707; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 999999; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s ease-in-out;"
+         onmouseover="this.style.transform='scale(1.1)';" 
+         onmouseout="this.style.transform='scale(1)';">
+        
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="4" r="2" fill="#fbc707"/>
+            <path d="M19 13C19 14.1 18.1 15 17 15H14V20C14 21.1 13.1 22 12 22C10.9 22 10 21.1 10 20V15H7C5.9 15 5 14.1 5 13V9C5 7.9 5.9 7 7 7H17C18.1 7 19 7.9 19 9V13Z" fill="#fbc707"/>
+        </svg>
+    </div>
+
+    <script style="display:none" class="document-script">
+        (function() {
+            var el = document.createElement('script');
+            el.src = 'https://cdn.enable.co.il/licenses/enable-v2.min.js';
+            el.type = 'text/javascript';
+            el.async = true;
+            window._enable_config = {
+                position: 'right',
+                type: 'accessibility',
+                utf8: true,
+                button_style: 'none' // מבטל את הכפתור המקורי החבוי שלהם
+            };
+            document.getElementsByTagName('head')[0].appendChild(el);
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+{
+  "ikea-rishon-lezion": {
+    "title": "שיפוץ מתחם שירותי עובדים - IKEA",
+    "description": "שיפוץ מלא של מתחם שירותי העובדים במסעדת העובדים של איקאה. הפרויקט כלל הריסה ובנייה מחדש של חדרי שירותים לגברים ולנשים, החלפת כלל המערכות והתשתיות בהתאם לסטנדרטים המחמירים של IKEA Sweden, חידוש הפרקט בקפיטריה וטיפול בקירות מסעדת העובדים. העבודה בוצעה תחת מגבלות לוגיסטיות מורכבות, שעות עבודה מצומצמות ונהלי בטיחות ותפעול קפדניים, תוך שמירה על פעילות שוטפת של החנות. הפרויקט הושלם בתוך 14 ימים בלבד, כולל אספקה והתקנה של כל פריטי הגמר, הנגרות, הדלתות והכלים הסניטריים.",
+    "location": "ראשון לציון",
+    "architect": "",
+    "year": "2023",
+    "images": []
+  },
+  "ikea-netanya": {
+    "title": "שיקום חדר טעינת מלגזות - IKEA",
+    "description": "שיקום וחידוש חדר טעינת המלגזות במרכז הלוגיסטי של איקאה. החלל הוותיק סבל משחיקה משמעותית של הרצפה, הקירות והתשתיות. הפרויקט כלל פינוי מלא, ניקוי יסודי, החלקת קירות ורצפה, ליטוש השטח ויישום רצפת אפוקסי תעשייתית דו-רכיבית בעלת עמידות גבוהה לעומסים כבדים. כל העבודות בוצעו במסגרת לוח זמנים מאתגר במיוחד והושלמו בתוך ארבעה ימים בלבד.",
+    "location": "נתניה",
+    "architect": "",
+    "year": "2023",
+    "images": []
+  },
+  "mego-afek": {
+    "title": "הקמת מחלקות משרדים חדשות - MEGO AFEK",
+    "description": "הקמת שתי מחלקות חדשות במתחם המשרדים של המפעל, תוך הסבת חלל ששימש בעבר כסדנת עבודה לסביבת עבודה מודרנית. הפרויקט כלל ביצוע מלא של מערכות חשמל, תקשורת ומיזוג אוויר, עבודות נגרות מותאמות אישית, התקנת עמדות עבודה וריהוט בהתאם לתכנון האדריכלי. העבודה בוצעה בשלבים שאפשרו לעובדי החברה להמשיך בפעילות רציפה, ובמקביל בוצע שדרוג של המסדרונות והחללים המשותפים.",
+    "location": "קיבוץ אפק",
+    "architect": "אידה דהרי",
+    "year": "2025",
+    "images": [
+        "../assets/images/projects/mago_afek/1.jpg",
+        "../assets/images/projects/mago_afek/2.jpg",
+        "../assets/images/projects/mago_afek/3.jpg",
+        "../assets/images/projects/mago_afek/4.jpg",
+        "../assets/images/projects/mago_afek/5.jpg",
+        "../assets/images/projects/mago_afek/6.jpg",
+        "../assets/images/projects/mago_afek/7.jpg",
+        "../assets/images/projects/mago_afek/8.jpg",
+        "../assets/images/projects/mago_afek/9.jpg",
+        "../assets/images/projects/mago_afek/10.jpg",
+        "../assets/images/projects/mago_afek/11jpg",
+        "../assets/images/projects/mago_afek/12.jpg"
+    ]
+  },
+  "stanley-restrooms": {
+    "title": "שיפוץ מתחם שירותי עובדים - סטנלי",
+    "description": "שיפוץ מקיף של מתחם שירותי העובדים באזור הייצור בשטח של כ-150 מ\"ר. הפרויקט כלל הריסה מלאה ובנייה מחדש של חדרי שירותים לגברים ולנשים, התקנת מערכות אינסטלציה תעשייתיות מתקדמות, משתנות אוטומטיות עם חיישנים, מערכות שטיפה בלחץ מים, מאות מטרים של חיפויי קירות, מחיצות טרספה, עבודות אלומיניום, שיש וכלים סניטריים. העבודות הושלמו בפרק זמן קצר במיוחד וכללו עבודה בשעות הלילה כדי לעמוד בלוחות הזמנים.",
+    "location": "כרמיאל",
+    "architect": "אידה דהרי",
+    "year": "2024",
+    "images": []
+  },
+  "stanley-cafeteria": {
+    "title": "שדרוג מבואת חדר אוכל - סטנלי",
+    "description": "עיצוב מחדש ושדרוג מבואת הכניסה לחדר האוכל של החברה. העבודה כללה טיפול בתשתיות קיימות, התאמת מערכות אינסטלציה וחשמל, החלפת אביזרים ויצירת שפה עיצובית חדשה המשדרגת את חוויית המשתמש בחלל המרכזי של העובדים.",
+    "location": "כרמיאל",
+    "architect": "אידה דהרי",
+    "year": "2024",
+    "images": [
+        "../assets/images/projects/stanley/1.png",
+        "../assets/images/projects/stanley/2.png",
+        "../assets/images/projects/stanley/3.png",
+        "../assets/images/projects/stanley/4.png",
+        "../assets/images/projects/stanley/5.png"
+    ]
+  },
+  "volta": {
+    "title": "הרחבה ושיפוץ חדר אוכל ומטבח - וולטה",
+    "description": "הרחבה ושיפוץ מלא של מתחם המטבח וחדר האוכל, כולל תוספת בנייה של כ-100 מ\"ר. הפרויקט כלל הריסה מלאה של החלל הקיים ובנייה מחדש של כלל המערכות: אינסטלציה, חשמל, תקשורת, מיזוג אוויר, גילוי וכיבוי אש ומערכת כיבוי אוטומטית למנדפים. בנוסף, סיפקנו והתקנו את כלל רכיבי הגמר, לרבות עבודות אלומיניום, זכוכית, נגרות, שיש, נירוסטה וכלים סניטריים.",
+    "location": "כרמיאל",
+    "architect": "אידה דהרי",
+    "year": "2025",
+    "images": [
+        "../assets/images/projects/volta/1.png",
+        "../assets/images/projects/volta/2.png",
+        "../assets/images/projects/volta/3.png",
+        "../assets/images/projects/volta/4.png",
+        "../assets/images/projects/volta/5.png",
+        "../assets/images/projects/volta/6.png",
+        "../assets/images/projects/volta/7.png",
+        "../assets/images/projects/volta/8.png",
+        "../assets/images/projects/volta/9.png",
+        "../assets/images/projects/volta/10.png"
+    ]
+  },
+  "plasim": {
+    "title": "שיפוץ משרדי חברת פלסים",
+    "description": "שיפוץ מקיף של מתחם משרדים בשטח של כ-300 מ\"ר במבנה ותיק שעבר התאמה מלאה לצורכי החברה. העבודה כללה החלפת כלל התשתיות, בניית חדר ישיבות חדש, ביצוע עבודות גמר מלאות ואספקת כל רכיבי הפרויקט. כחלק מהקונספט העיצובי שולבו צינורות המותג של החברה כאלמנט אדריכלי ייחודי להעברת מערכות התשתית.",
+    "location": "כרמיאל",
+    "architect": "",
+    "year": "2025",
+    "images": [
+        "../assets/images/projects/plassim/1.jpg",
+        "../assets/images/projects/plassim/2.jpg",
+        "../assets/images/projects/plassim/3.jpg",
+        "../assets/images/projects/plassim/4.jpg",
+        "../assets/images/projects/plassim/5.jpg",
+        "../assets/images/projects/plassim/6.jpg",
+        "../assets/images/projects/plassim/7.jpg",
+        "../assets/images/projects/plassim/8.jpg",
+        "../assets/images/projects/plassim/9.jpg",
+        "../assets/images/projects/plassim/10.jpg",
+        "../assets/images/projects/plassim/11.jpg",
+        "../assets/images/projects/plassim/12.jpg",
+        "../assets/images/projects/plassim/13.jpg",
+        "../assets/images/projects/plassim/14.jpg",
+        "../assets/images/projects/plassim/15.jpg",
+        "../assets/images/projects/plassim/16.jpg"
+    ]
+  },
+  "haifa-port-loft": {
+    "title": "הסבת חלל עבודה ליחידת מגורים",
+    "description": "הסבת חלל עבודה ישן ליחידת מגורים מעוצבת בשטח של כ-70 מ\"ר. הפרויקט כלל תכנון וביצוע מלא של מערכות חשמל, אינסטלציה, מיזוג אוויר ותאורה, הקמת חדר רחצה חדש, עבודות חיפוי וריצוף, נגרות בהתאמה אישית ואספקת כלל חומרי הגמר.",
+    "location": "נמל חיפה",
+    "architect": "",
+    "year": "2026",
+    "images": [
+      "../assets/images/projects/haifa_port/1.JPG"
+    ]
+  },
+  "hamyasdim-16": {
+    "title": "הקמת מסעדה - המייסדים 16",
+    "description": "הקמת מסעדה חדשה במבנה שהיה בשלב מעטפת בלבד. הפרויקט כלל ביצוע מלא של כלל התשתיות הנדרשות לקבלת אישורים והפעלת העסק: חשמל, אינסטלציה, מיזוג אוויר, גז, גילוי וכיבוי אש, מערכות אוויר צח ועבודות בנייה וגמר. החלל הושלם תוך שילוב בין חיפויי נגרות ייחודיים לטיח ערבה טבעי בהתאם לקונספט האדריכלי.",
+    "location": "זכרון יעקב",
+    "architect": "אייל צייג",
+    "year": "2025",
+    "images": []
+  },
+  "golda-krityat-ata": {
+    "title": "הקמת סניף - גולדה קריית אתא",
+    "description": "הקמת סניף חדש של רשת גולדה בקניון אלונים. העבודה כללה אחריות מלאה על כלל התשתיות – חשמל, תקשורת, מערכות גילוי וכיבוי אש, תעלות נירוסטה רצפתיות, חיבור למפריד שומנים ותכנון מערכות החשמל. בנוסף בוצעו עבודות חיפוי, הכנות לנגרות ושיש ותקרות מעוצבות בחלל הלקוחות ובמטבח. משך ביצוע: כחודש.",
+    "location": "גבעת אלונים, קריית אתא",
+    "architect": "דימה",
+    "year": "2025",
+    "images": [
+      "../assets/images/projects/golda/1.png"
+    ]
+  },
+  "yesh-po-pizza": {
+    "title": "שיפוץ מקיף לפיצרייה - יש פה פיצה",
+    "description": "שיפוץ אדריכלי מלא לפיצרייה ותיקה ומצליחה במרכז נהריה. הפרויקט כלל פירוק מלא של העסק ובנייתו מחדש מהיסוד, כולל תשתיות גז, מים, חשמל, תקשורת, גילוי אש, מערכות מנדף וטאבון, מיזוג אוויר ועבודות גמר מלאות. בנוסף בוצעו עבודות אלומיניום, זכוכית, תאורה, חיפויים ותעלות נירוסטה תעשייתיות כחלק מהתאמת המטבח לסטנדרטים מקצועיים גבוהים.",
+    "location": "נהריה",
+    "architect": "",
+    "year": "2025",
+    "images": [
+        "../assets/images/projects/pizza/1.jpg",
+        "../assets/images/projects/pizza/2.jpg",
+        "../assets/images/projects/pizza/3.jpg",
+        "../assets/images/projects/pizza/4.jpg",
+        "../assets/images/projects/pizza/5.jpg",
+        "../assets/images/projects/pizza/6.jpg",
+        "../assets/images/projects/pizza/7.jpg",
+        "../assets/images/projects/pizza/8.jpg",
+        "../assets/images/projects/pizza/9.jpg"
+
+    ]
+  },
+  "xact": {
+    "title": "שיפוץ משרדי XACT",
+    "description": "ביצוע שינויים נרחבים במשרדי חברה פעילה בשטח של כ-700 מ\"ר, תוך שמירה על רציפות תפעולית. העבודה כללה חלוקה מחדש של החללים, הקמת חדר אוכל, משרדים ומסדרונות חדשים, התאמות תשתית נקודתיות, התקנת מערכות רצפה-תקרה בשיתוף INNOVATE ואספקת נגרות בהתאמה אישית. הפרויקט הושלם בתוך 30 ימים.",
+    "location": "קיסריה",
+    "architect": "עופר רנד",
+    "year": "2018",
+    "images": [
+        "../assets/images/projects/xact/1.png",
+        "../assets/images/projects/xact/2.png",
+        "../assets/images/projects/xact/3.png",
+        "../assets/images/projects/xact/4.png",
+        "../assets/images/projects/xact/5.png"
+        
+
+    ]
+  },
+  "house-tivon": {
+    "title": "שיפוץ בית פרטי - טבעון",
+    "description": "שיפוץ יסודי של בית פרטי ותיק בשטח של כ-250 מ\"ר, אשר לא התאים עוד לצורכי המגורים המודרניים. הפרויקט כלל פירוק מלא של המבנה, ניסור קירות תומכים בליווי מהנדס, החלפת כל התשתיות, שינויי חלוקה, טיפול בחזיתות, חנייה ופיתוח חוץ. בנוסף בוצעו עבודות נגרות, אלומיניום, זכוכית, גדרות, שערים, גינה וכלל עבודות הגמר בהתאם לתכנון האדריכלי.",
+    "location": "טבעון",
+    "architect": "לי מילוא",
+    "year": "2024",
+    "images": [
+        "../assets/images/projects/tivon_villa/1.png",
+        "../assets/images/projects/tivon_villa/2.png",
+        "../assets/images/projects/tivon_villa/3.png"
+    ]
+  },
+  "tzfririm-1": {
+    "title": "שדרוג מתחם משרדים ומסחר - צפרירים 1",
+    "description": "שדרוג מתחם משרדים ומסחר בשטח של כ-90 מ\"ר. העבודה כללה הקמת מתחם שירותים חדש, התאמות במשרדים קיימים, עבודות תחזוקה שוטפות ושדרוג מטבח תעשייתי, לרבות טיפול בתשתיות, ריצופים, חיפויים ועבודות צבע.",
+    "location": "חיפה",
+    "architect": "",
+    "year": "2023",
+    "images": [
+        "../assets/images/projects/tzafririm/1.jpg"
+    ]
+  },
+  "isrotel-carmel-forest": {
+    "title": "שיפוץ מרפסת מלון - ישרוטל יערות הכרמל",
+    "description": "חידוש מרפסת חוץ בשטח של כ-350 מ\"ר במסגרת שיפוץ רחב היקף של המלון. הפרויקט כלל פירוק ריצופים קיימים, עבודות איטום, ריצוף חדש בגרניט פורצלן דמוי אבן, עבודות צבע חוץ והשלמת כלל הגמרים. העבודה בוצעה בתנאי מזג אוויר מאתגרים במיוחד ובמסגרת לוח זמנים קצר ונוקשה.",
+    "location": "יערות הכרמל",
+    "architect": "אבי פייט",
+    "year": "2023",
+    "images": [
+        "../assets/images/projects/isrotel/1.webp"
+    ]
+  },
+  "derech-hatzafon": {
+    "title": "הסבת מבנה למתחם משרדים - דרך הצפון",
+    "description": "הסבת נכס ותיק למתחם משרדים מודרני בשטח של כ-700 מ\"ר עבור שתי חברות הפועלות בשיתוף פעולה. הפרויקט כלל שדרוג מלא של מערכות החשמל, המים והתקשורת, ביצוע עבודות גמר, נגרות, אלומיניום וריצוף, לצד ניהול ותיאום של כלל בעלי המקצוע עד למסירת המשרדים ואכלוסם מחדש.",
+    "location": "קיסריה",
+    "architect": "רז בן אור",
+    "year": "2025",
+    "images": []
+  },
+  "mandarin": {
+    "title": "הקמת מתחם שירותים נגיש - מנדרין",
+    "description": "ביצוע עבודות תחזוקה ובנייה כחלק משיתוף פעולה שוטף עם רשת בתי הקפה. הפרויקט כלל הקמת מתחם שירותים נגיש בחצר המסעדה, ביצוע התאמות גובה, תשתיות מים וחשמל, בנייה קלה מפנלים מבודדים, עבודות ריצוף, חיפוי וצבע. כל העבודות בוצעו תוך שמירה על פעילותו השוטפת של הסניף.",
+    "location": "חיפה",
+    "architect": "",
+    "year": "2023",
+    "images": [
+        "../assets/images/projects/mandarin/1.jpg"
+    ]
+  }
+
+  
+}
