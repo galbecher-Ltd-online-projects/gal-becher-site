@@ -858,3 +858,21 @@ h2 {
     }
 }
 
+
+/* עיצוב אזור הקישורים לרשתות חברתיות */
+.social-links {
+    display: flex;
+    gap: 15px; /* מרווח בין אייקון לאייקון */
+    justify-content: center; /* מרכוז האייקונים */
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fbc707; /* צבע צהוב של המותג */
+    font-size: 24px; /* גודל האייקון */
+    transition: color 0.3s ease; /* אפקט מעבר חלק במעבר עכבר */
+}
+
+.social-links a:hover {
+    color: #ffffff; /* שינוי ללבן כשעוברים עם העכבר */
+}
