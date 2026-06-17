@@ -5,7 +5,9 @@
     "location": "ראשון לציון",
     "architect": "",
     "year": "2023",
-    "images": []
+    "images": [
+      "../assets/images/projects/ikea/0.webp"
+    ]
   },
   "ikea-netanya": {
     "title": "שיקום חדר טעינת מלגזות - IKEA",
@@ -13,7 +15,9 @@
     "location": "נתניה",
     "architect": "",
     "year": "2023",
-    "images": []
+    "images": [
+      "../assets/images/projects/ikea/1.jpg"
+    ]
   },
   "mego-afek": {
     "title": "הקמת מחלקות משרדים חדשות - MEGO AFEK",
